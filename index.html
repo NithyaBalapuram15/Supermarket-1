@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart Supermarket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <h1 class="logo">FreshMart</h1>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="cart-btn">🛒 Cart <span id="cartCount">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div>
+                    <p class="tagline">Fresh • Quality • Affordable</p>
+                    <h2>Your Everyday Supermarket</h2>
+                    <p>Shop fresh groceries, fruits, vegetables, snacks and household essentials in one place.</p>
+                    <a href="#products" class="primary-btn">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+
+                <div class="category-grid">
+                    <div class="category-card">🥦<h3>Vegetables</h3></div>
+                    <div class="category-card">🍎<h3>Fruits</h3></div>
+                    <div class="category-card">🥛<h3>Dairy</h3></div>
+                    <div class="category-card">🍪<h3>Snacks</h3></div>
+                    <div class="category-card">🍚<h3>Groceries</h3></div>
+                    <div class="category-card">🧹<h3>Home Care</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section products-section" id="products">
+            <div class="container">
+                <h2 class="section-title">Popular Products</h2>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image">🍎</div>
+                        <h3>Fresh Apples</h3>
+                        <p>₹120 / kg</p>
+                        <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">🍌</div>
+                        <h3>Bananas</h3>
+                        <p>₹60 / dozen</p>
+                        <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">🥛</div>
+                        <h3>Fresh Milk</h3>
+                        <p>₹60 / litre</p>
+                        <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">🍚</div>
+                        <h3>Rice</h3>
+                        <p>₹70 / kg</p>
+                        <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer">
+            <div class="container">
+                <h2>Special Offer</h2>
+                <p>Get up to 20% off on selected grocery items!</p>
+                <a href="#products" class="primary-btn">View Products</a>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p>Email: support@freshmart.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 FreshMart Supermarket. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById("cartCount").textContent = cartCount;
+        }
+    </script>
+
+</body>
+</html>
